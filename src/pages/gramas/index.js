@@ -6,19 +6,18 @@ export default function Index(){
     
     const [resposta, setResposta] = useState('');
     const [valor, setValor] = useState('');
+    
 
     const [carregando, setCarregando] = useState('');
     const [erro, setErro] = useState('');
     const ref = useRef();
 
-    useEffect(() => {
-        calcular();
-    }, [])
+    
   
-
     function compra(gramas){
-      try{
+      
     let total = 0; 
+    
 
     if ( gramas > 1000) {
         total = (gramas / 100 ) * 3.0;
@@ -31,27 +30,9 @@ export default function Index(){
     
 
     return total; 
-    
-}catch (err){
-        alert(err.message)
-    }
-}
-
-
-
-     
    
-    function calcular(){
-        try {
-            if(gramas<=0){
-                alert('Peso inválido')
-            }
-            const r=compra(gramas)
-            setResposta(r)
-        } catch (err){
-            alert(err.message)
-        }
     }
+
 
     function calcularClick(){
         let x = compra(gramas);

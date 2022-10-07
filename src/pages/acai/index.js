@@ -1,4 +1,4 @@
-import { useState , useRef } from 'react';
+import { useState , useRef, useEffect } from 'react';
 
 export default function Index(){
 
@@ -6,6 +6,9 @@ export default function Index(){
     const [medio, setMedio] = useState(0);
     const [grande, setGrande] = useState(0);
     const [desconto, setDesconto] = useState(0);
+
+    const [total, setTotal] = useState('');
+
 
     const [resposta, setResposta] = useState(0);
     const [carregando, setCarregando] = useState(false);
@@ -15,7 +18,6 @@ export default function Index(){
     
     function compra(acai1, acai2, acai3, desconto){
 
-        try{
 
         let pequeno= acai1 * 13.50;
         let medio = acai2 * 15.00;
@@ -23,16 +25,18 @@ export default function Index(){
         let x= pequeno+medio+grande;
         let y = (pequeno + medio + grande ) * desconto / 100;
         let final = x-y;
-        return final; }
-        
-        catch (err) {
-            ref.current.complete()
-            setCarregando(false)
-            if (err.message.status === 401) {
-                setErro(err.message.data.Erro)
-            }
-        }
+        return final
+        setTotal (final); 
+    
+    if (acai1 < 0 ||  acai2 < 0 ||  acai3 < 0 || desconto < 0 ){
+        setTotal('Valor invalido')
     }
+
+    else if(desconto === 100){
+        setTotal('Free sale')
+    }
+
+}
 
     function calcularClick(){
         let x = compra(pequeno, medio, grande, desconto);
