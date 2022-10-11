@@ -1,11 +1,12 @@
 import { useState , useRef, useEffect } from 'react';
+import './index.scss'
 
 export default function Index(){
 
-    const [pequeno, setPequeno ] = useState(0);
-    const [medio, setMedio] = useState(0);
-    const [grande, setGrande] = useState(0);
-    const [desconto, setDesconto] = useState(0);
+    const [pequeno, setPequeno ] = useState('');
+    const [medio, setMedio] = useState('');
+    const [grande, setGrande] = useState('');
+    const [desconto, setDesconto] = useState('');
 
     const [total, setTotal] = useState('');
 
@@ -46,17 +47,30 @@ export default function Index(){
     
 
     return(
-        <main>
-            <h1>Compra Açai</h1>
-            <div>
+        <main className='main2'>
+                 <a href="/">Voltar</a>
+            <div className='div1'>
+            
+            <h1>Comprar Açai</h1>
+            
+        <div>
+
+        <input placeholder='Pequeno' type="text" value={pequeno} onChange={e => setPequeno(Number(e.target.value))} ></input>
+
+        </div>
+        <div>
         
-        <input type="text" value={pequeno} onChange={e => setPequeno(Number(e.target.value))} ></input>
-        <input type="text" value={medio} onChange={e => setMedio(Number(e.target.value))}></input>
-        <input type="text" value={grande} onChange={e => setGrande(Number(e.target.value))}></input>
+        <input placeholder='Médio' type="text" value={medio} onChange={e => setMedio(Number(e.target.value))}></input>
+
         </div>
 
         <div>
-        <input type='text' value={desconto} onChange={e => setDesconto(Number(e.target.value))}></input>
+        <input placeholder='Grande' type="text" value={grande} onChange={e => setGrande(Number(e.target.value))}></input>
+        </div>
+        
+
+        <div>
+        <input placeholder='Desconto' type='text' value={desconto} onChange={e => setDesconto(Number(e.target.value))}></input>
         </div>
 
         <div>
@@ -71,6 +85,8 @@ export default function Index(){
 
         <div>
             {erro}
+        </div>
+
         </div>
 
         

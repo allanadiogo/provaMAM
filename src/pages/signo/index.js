@@ -1,4 +1,5 @@
 import { useState, useRef} from 'react';
+import './index.scss'
 
 export default function Index(){
 
@@ -46,19 +47,23 @@ export default function Index(){
     
 
     return(
-        <main>
+        <main className='main1'>
+            <a href="/">Voltar</a>
+
+            <div className='div1'>
+
             <h1>Verificar se o Signo é de Libra</h1>
 
             <div>
 
             
         
-        <input type="text" value={mes} onChange={e => setMes(e.target.value)} ></input>
+        <input placeholder='Mês' type="text" value={mes} onChange={e => setMes(e.target.value)} ></input>
         
         </div>
 
         <div>
-        <input type='text' value={dia} onChange={e => setDia(e.target.value)}></input>
+        <input placeholder='Dia' type='text' value={dia} onChange={e => setDia(e.target.value)}></input>
         </div>
 
         <div>
@@ -75,7 +80,7 @@ export default function Index(){
             {erro}
         </div>
 
-        
+        </div>
         </main>
     )
 }
