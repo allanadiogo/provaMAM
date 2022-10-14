@@ -11,7 +11,8 @@ import Home from './pages/home'
 import Salario from './pages/salario'
 import Temperatura from './pages/temperatura'
 import Paradas from './pages/paradas'
-
+import Ingresso from './pages/ingresso'
+import Familia from './pages/familia'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,8 +28,8 @@ root.render(
     <Route   path='/salario' element={<Salario/>} />
     <Route   path='/temperatura' element={<Temperatura/>} />
     <Route   path='/paradas' element={<Paradas/>} />
-
-
+    <Route   path='/ingresso' element={<Ingresso/>} />
+    <Route   path='/familia' element={<Familia/>} />
 
   </Routes>
   </BrowserRouter>

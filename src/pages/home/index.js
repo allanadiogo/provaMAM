@@ -9,7 +9,9 @@ export default function Index(){
         <a href="/signo">Signo</a>
         <a href="/gramas">Gramas</a>
         <a href="/salario">Salario</a>
-        <a href="/Paradas">Paradas</a>
+        <a href="/paradas">Paradas</a>
+        <a href="/ingresso">Ingresso</a>
+        <a href="/familia">Orçamento Familia</a>
 
 </div>
 </main>
