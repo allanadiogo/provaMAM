@@ -12,6 +12,8 @@ export default function Index(){
         <a href="/paradas">Paradas</a>
         <a href="/ingresso">Ingresso</a>
         <a href="/familia">Orçamento Familia</a>
+        <a href="/NumerosNaturais">Numeros Naturais</a>
+        <a href="/Linha">Linha</a>
 
 </div>
 </main>

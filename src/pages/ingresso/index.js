@@ -1,4 +1,4 @@
-import { useState,useEffect} from 'react';
+import { useState, useEffect} from 'react';
 import './index.scss'
 
 export default function Index(){
@@ -46,9 +46,7 @@ export default function Index(){
     }
 
     
-useEffect(() => {
-    ingressosCinema()
-}, [inteiras,meias,diaSemana, nacional])
+
 
     
 

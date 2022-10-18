@@ -13,6 +13,8 @@ import Temperatura from './pages/temperatura'
 import Paradas from './pages/paradas'
 import Ingresso from './pages/ingresso'
 import Familia from './pages/familia'
+import NumerosNaturais from './pages/NumerosNaturais'
+import Linha from './pages/Linha'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,6 +32,8 @@ root.render(
     <Route   path='/paradas' element={<Paradas/>} />
     <Route   path='/ingresso' element={<Ingresso/>} />
     <Route   path='/familia' element={<Familia/>} />
+    <Route   path='NumerosNaturais' element={<NumerosNaturais/>} />
+    <Route   path='Linha' element={<Linha/>} />
 
   </Routes>
   </BrowserRouter>

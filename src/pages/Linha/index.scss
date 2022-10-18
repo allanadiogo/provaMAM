@@ -1,0 +1,26 @@
+.main5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .div1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 1em;
+    }
+
+    .div-1{
+    display: flex;
+    width: 100%;
+    
+    justify-content: center;
+    height: max-content;
+}
+    p{
+        width: max-content;
+        padding: 0 .2em;
+    }
+}
