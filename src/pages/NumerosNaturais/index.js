@@ -9,20 +9,23 @@ export default function Index(){
     const [resposta, setResposta] = useState('');
     const [carregando, setCarregando] = useState('');
     const [erro, setErro] = useState('');
+
+    const [arr, setArr] = useState([]);
     const ref = useRef();
     
 
     
     function Contar(comeco, limite){
         try{
-            let x = [];
+            let array = [];
             let e = 0;
             let i = '';
             for(i = comeco; i <= limite ; i++){
-                x[e]= i;
+                array[e]= i;
                 e++
             }
-            return x;
+           
+            setArr(array)
             
             
     }
@@ -67,8 +70,10 @@ export default function Index(){
         </button>
         </div>
 
-        <div>
-            <span className='span'> {resposta} </span>
+        <div className='div-1'>
+            {arr.map((item) => <p>
+                {item}
+            </p>)}
         </div>
 
         <div>

@@ -4,12 +4,19 @@
     justify-content: center;
     flex-direction: column;
     
-
-    span {
+    .div-1{
         display: flex;
-        
+        width: 100%;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        
+        height: max-content;
     }
+
+    p{
+        width: max-content;
+        padding: 0 .2em;
+    }
+    
 
 }
