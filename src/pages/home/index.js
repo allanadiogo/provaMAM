@@ -14,6 +14,8 @@ export default function Index(){
         <a href="/familia">Orçamento Familia</a>
         <a href="/NumerosNaturais">Numeros Naturais</a>
         <a href="/Linha">Linha</a>
+        <a href="/retangulo">Retangulo</a>
+
 
 </div>
 </main>

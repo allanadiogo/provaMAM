@@ -15,6 +15,8 @@ import Ingresso from './pages/ingresso'
 import Familia from './pages/familia'
 import NumerosNaturais from './pages/NumerosNaturais'
 import Linha from './pages/Linha'
+import Retangulo from './pages/retangulo'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,8 +34,10 @@ root.render(
     <Route   path='/paradas' element={<Paradas/>} />
     <Route   path='/ingresso' element={<Ingresso/>} />
     <Route   path='/familia' element={<Familia/>} />
-    <Route   path='NumerosNaturais' element={<NumerosNaturais/>} />
-    <Route   path='Linha' element={<Linha/>} />
+    <Route   path='/NumerosNaturais' element={<NumerosNaturais/>} />
+    <Route   path='/Linha' element={<Linha/>} />
+    <Route   path='/retangulo' element={<Retangulo/>} />
+
 
   </Routes>
   </BrowserRouter>
