@@ -50,9 +50,11 @@ export default function Index(){
 
     return(
         <main className='main4'>
+            <a href="/">Voltar</a>
             <h1>Numeros Naturais</h1>
 
             <div>
+            
 
             
         

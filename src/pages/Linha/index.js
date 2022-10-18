@@ -43,6 +43,7 @@ export default function Index(){
 
     return(
         <main className='main5'>
+            <a href="/">Voltar</a>
             
 
             <div className='div1'>
