@@ -15,6 +15,8 @@ export default function Index(){
         <a href="/NumerosNaturais">Numeros Naturais</a>
         <a href="/Linha">Linha</a>
         <a href="/retangulo">Retangulo</a>
+        <a href="/cafe">Cafe</a>
+
 
 
 </div>

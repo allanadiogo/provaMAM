@@ -16,6 +16,7 @@ import Familia from './pages/familia'
 import NumerosNaturais from './pages/NumerosNaturais'
 import Linha from './pages/Linha'
 import Retangulo from './pages/retangulo'
+import Cafe from './pages/cafe'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,6 +38,7 @@ root.render(
     <Route   path='/NumerosNaturais' element={<NumerosNaturais/>} />
     <Route   path='/Linha' element={<Linha/>} />
     <Route   path='/retangulo' element={<Retangulo/>} />
+    <Route   path='/cafe' element={<Cafe/>} />
 
 
   </Routes>
