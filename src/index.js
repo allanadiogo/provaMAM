@@ -17,6 +17,7 @@ import NumerosNaturais from './pages/NumerosNaturais'
 import Linha from './pages/Linha'
 import Retangulo from './pages/retangulo'
 import Cafe from './pages/cafe'
+import JurosCompostos from './pages/jurosCompostos'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -39,6 +40,7 @@ root.render(
     <Route   path='/Linha' element={<Linha/>} />
     <Route   path='/retangulo' element={<Retangulo/>} />
     <Route   path='/cafe' element={<Cafe/>} />
+    <Route   path='/JurosCompostos' element={<JurosCompostos/>} />
 
 
   </Routes>

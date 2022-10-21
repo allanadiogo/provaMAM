@@ -16,6 +16,7 @@ export default function Index(){
         <a href="/Linha">Linha</a>
         <a href="/retangulo">Retangulo</a>
         <a href="/cafe">Cafe</a>
+        <a href="/jurosCompostos">Juros Simples</a>
 
 
 
