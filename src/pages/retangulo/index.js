@@ -6,6 +6,7 @@ export default function Index(){
     const [base, setBase] = useState('');
     const [altura, setAltura] = useState('');
     const [carregando, setCarregando] = useState('');
+    const [arr, setArr] = useState([]);
 
     const [resposta, setResposta] = useState('');
     const ref = useRef();
@@ -13,18 +14,16 @@ export default function Index(){
 
 function desenharretangulo(base,altura) {
 
-    if(base = altura) throw new Error('isso é um quadrado');
-    if (isNaN(base) || isNaN(altura) || base < 0 || altura  < 0 ) throw new 
-    Error('Digite um número valido!');
+    let array = [];
 
     for (let linha = 1; linha < altura; linha++) {
         for (let coluna =1; coluna < base; coluna++) {
-            process.stdout.write("*");
+            array[linha] = "*"
         }
-
+        
     }
 
-    return  process.stdout.write;
+    setArr(array);
 }
  
 
@@ -60,7 +59,9 @@ return(
 
         
         <div>
-            <span>{resposta} </span>
+        {arr.map((item) => <p>
+                {item}
+            </p>)}
         </div>
 
    
