@@ -1,53 +1,91 @@
-import { useState, useRef} from 'react';
+import { useState, useRef } from 'react';
+import './index.scss';
 
-export default function Index(){
+
+
+export default function Index() {
 
     const [alunos, setAlunos] = useState('');
-    
-    const [resposta, setResposta] = useState('');
-    const [media, setMedia] = useState('');
-    const [maior, setMaior] = useState('');
-    const [menor, setMenor] = useState('');
+    const [qtdalunos, setQtdalunos] = useState('');
+    const [resposta, setResposta] = useState([]);
+
+    const [arr, setArr] = useState([]);
+
 
 
     const [carregando, setCarregando] = useState('');
     const [erro, setErro] = useState('');
     const ref = useRef();
 
-    
-  
- 
+    function maior() {
+        let x = 0;
+        let item = []
+        for (item of alunos) {
+
+            if (x < item) {
+                x = item;
+            }
+        }
+        return x;
+    }
+
+    function media() {
+        let x = 0;
+        let item = []
+        for (item of alunos) {
+            x = x + item;
+        }
+        return x / alunos.length;
+    }
+
+    function menor() {
+        let x = Infinity;
+        let item = []
+        for (item of alunos) {
+
+            if (x > item) {
+                x = item;
+            }
+        }
+    }
+
+    function calcularalunos() { 
+        let array = []      
+           for (let cont = 1; cont <= qtdalunos; cont++)
+            { array[cont] = cont } 
+            setResposta(array) }
 
 
 
-    return(
+
+
+
+
+    return (
         <main className='main-media'>
             <h1>Calcular Media</h1>
-            
-            
+
+            <div className='div1'>
             <div>
-        <h1>Quantidade de Alunos:</h1>
-        <input type="text" onChange={e => (e.target.value)} ></input>
-        <button>OK</button>
+                <p>Quantidade de Alunos:</p>
+                <input type="text"  value={qtdalunos} onChange={e => setQtdalunos(e.target.value)} ></input>
+                <button onClick={calcularalunos}>OK</button>
+            </div>
+
+            <div className="div-1">
+             {resposta.map(item => <div>
+                <p>Aluno  {item}</p> 
+                <input className='' disabled={carregando}/>
+            </div>)}
         </div>
 
-        <div>
+          
 
-       
-        <span>
-           Auno 1: {resposta} 
-        </span>
+            <div>
+                {erro}
+            </div>
 
-        <button className=''  disabled={carregando}>
-            Calcular
-        </button>
-        </div>
-
-        <div>
-            {erro}
-        </div>
-
-        
+            </div>
         </main>
     )
-    }
+}
