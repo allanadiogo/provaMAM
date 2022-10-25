@@ -12,7 +12,7 @@ export default function Index(){
     const [resposta, setResposta] = useState('');
 
 
-    function ingressosCinema(inteiras, meias, diaSemana, nacional) {
+    function ingressoscinema(inteiras, meias, diaSemana, nacional) {
 
         try{
             
@@ -33,14 +33,16 @@ export default function Index(){
                 total = (inteiras * 28.5) + (meias * 14.25 ) ;
             }
             return total;
-       
-        } 
+        }
+         
     catch (err) {
             setResposta(err.message)            
          }
+        }
+        
 
     function calcularClick(){
-        let x = ingressosCinema(inteiras,meias,diaSemana, nacional);
+        let x = ingressoscinema(inteiras,meias,diaSemana, nacional);
         setResposta(x);
 
     }
@@ -99,5 +101,5 @@ export default function Index(){
         </main>
     )
 
-    }
+    
 }
