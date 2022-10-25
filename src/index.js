@@ -34,7 +34,7 @@ root.render(
     <Route   path='/salario' element={<Salario/>} />
     <Route   path='/temperatura' element={<Temperatura/>} />
     <Route   path='/paradas' element={<Paradas/>} />
-    <Route   path='/ingresso' element={<Ingresso/>} />
+    <Route   path='/Ingresso' element={<Ingresso/>} />
     <Route   path='/familia' element={<Familia/>} />
     <Route   path='/NumerosNaturais' element={<NumerosNaturais/>} />
     <Route   path='/Linha' element={<Linha/>} />
